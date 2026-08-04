@@ -7,6 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,450;0,9..144,600;1,9..144,450&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.cdnfonts.com/css/glacial-indifference" rel="stylesheet">
 <style>
   :root{
     --white:#FAF7F1;
@@ -119,25 +120,28 @@
   .hero{
     position:relative;
     height:100vh; min-height:640px;
-    display:flex; flex-direction:column; justify-content:flex-end;
+    display:flex; flex-direction:column; justify-content:flex-start;
   }
   .hero-overlay{
     position:absolute; inset:0;
-    background:linear-gradient(180deg, rgba(18,57,94,0.05) 0%, rgba(18,57,94,0.15) 55%, rgba(18,57,94,0.75) 100%);
+    background:linear-gradient(0deg, rgba(18,57,94,0.05) 0%, rgba(18,57,94,0.15) 55%, rgba(18,57,94,0.75) 100%);
   }
   .hero-content{
     position:relative; z-index:2;
-    padding:0 8vw 6vw;
+    padding:8vh 8vw 0;
     color:var(--white-pure);
   }
-  .hero-content .eyebrow{color:var(--magenta-soft);}
+  .hero-content .eyebrow{color:var(--magenta);}
   .hero-content h1{
+    font-family:'Glacial Indifference', sans-serif;
+    font-weight:700;
     font-size:clamp(2.6rem,7vw,5.2rem);
     color:var(--white-pure);
     line-height:0.98;
+    letter-spacing:-0.01em;
     margin:0.4rem 0 1rem;
   }
-  .hero-content h1 em{font-style:italic; color:var(--magenta-soft);}
+  .hero-content h1 em{font-style:normal; font-weight:500; color:var(--blue-sky);}
   .hero-content p{
     max-width:34ch;
     font-size:1.05rem;
@@ -275,10 +279,10 @@
   .cta-inline{
     position:relative; z-index:1;
     display:inline-flex; align-items:center; gap:10px;
-    background:var(--magenta); color:var(--white-pure);
+    background:#25D366; color:var(--white-pure);
     padding:1rem 1.8rem; border-radius:40px; text-decoration:none;
     font-weight:500; font-size:0.95rem;
-    box-shadow:0 8px 24px rgba(194,30,115,0.35);
+    box-shadow:0 8px 24px rgba(37,211,102,0.35);
     transition:transform 0.25s ease;
   }
   .cta-inline:hover{transform:translateY(-3px);}
@@ -351,9 +355,9 @@
     </div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="eyebrow">The Irresistible Beauty of Simplicity</span>
-      <h1>Mykonos<br><em>Behind Mykonos</em></h1>
+      <h1>Mykonos<br>Behind <em>Mykonos</em></h1>
       <p>Everything on this island worth seeing: the town, the coast, the hills, the stories in between. One private morning.</p>
+      <span class="eyebrow" style="display:block; margin-top:1.2rem;">The Irresistible Beauty of Simplicity</span>
       <a class="cta-inline" href="https://wa.me/YOURNUMBERHERE" target="_blank" rel="noopener" style="margin-top:0.6rem;">
         Reserve on WhatsApp →
       </a>
