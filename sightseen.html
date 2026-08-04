@@ -242,7 +242,7 @@
   .stop{
     position:relative; z-index:2;
     display:grid; grid-template-columns:1fr; gap:1.4rem;
-    margin-bottom:3.4rem; margin-left:44px;
+    margin-bottom:1.1rem; margin-left:44px;
   }
   .stop .stop-text{order:-1;}
   .stop .media-slider{aspect-ratio:4/3; border-radius:4px;}
@@ -261,6 +261,20 @@
 
   @media(max-width:760px){
     .stop-marker{left:22px; top:0.4rem;}
+  }
+
+  /* ===== Guest video reviews band ===== */
+  .reviews-frame{
+    background:linear-gradient(135deg, #8E1A5E 0%, var(--magenta) 100%);
+    padding:4rem 8vw; text-align:center;
+  }
+  .reviews-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:10px;
+    max-width:900px; margin:0 auto;
+  }
+  .reviews-grid .photo-slot{aspect-ratio:9/16; border-radius:6px;}
+  @media(max-width:700px){
+    .reviews-grid{grid-template-columns:1fr; max-width:340px;}
   }
 
   /* ===== Closing / CTA band ===== */
@@ -367,10 +381,8 @@
   <!-- Intro -->
   <section class="intro">
     <h2>Mykonos has been the muse of designers, the refuge of gods in myth, and the quiet obsession of everyone who has ever truly seen it. This is the morning you finally do.</h2>
-    <p style="max-width:52ch; margin:1.4rem auto 0; color:var(--ink-soft); font-size:1rem; line-height:1.65;">Sightseen isn't the highlight reel. It's the whole island in one morning: the town everyone photographs and the villages, beaches, and back roads they never find on their own.</p>
     <div class="stats">
       <div class="stat"><b>4 hrs</b>Morning start, two legs</div>
-      <div class="stat"><b>12</b>Stops across the island</div>
       <div class="stat"><b>1</b>Guide, start to finish</div>
     </div>
     <p style="max-width:50ch; margin:2.2rem auto 0; color:var(--ink-soft); font-size:0.95rem; line-height:1.7; font-style:italic;">Your guide isn't reciting a script. He's local. Mykonos is his. The celebrity stories, the myths older than the churches, the philosophy still woven into how the island lives: all of it comes from someone who has spent a lifetime inside it, not a guidebook. By the end of the morning, you won't just have seen the island. You'll have someone worth trusting to show you the rest of it.</p>
@@ -492,6 +504,7 @@
       <div class="stop-marker"></div>
       <div class="media-slider">
         <div class="slider-track">
+          <div class="photo-slot video-slot" style="border:none; padding:0;"><video src="videos/gioras-bakery-loop.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></video></div>
           <div class="photo-slot" style="border:none; padding:0;"><img src="images/gioras-bakery-interior.jpg" alt="Giora's Bakery pastry counter, Mykonos Chora" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="photo-slot" style="border:none; padding:0;"><img src="images/gioras-bakery-cafe.jpg" alt="Inside Giora's Bakery, Mykonos Chora" style="width:100%;height:100%;object-fit:cover;"></div>
         </div>
@@ -574,9 +587,15 @@
     <div class="transfer-frame">
       <span class="eyebrow">Between the two halves</span>
       <p>You continue by private Mercedes V-Class or Sprinter, your guide and driver with you throughout, door to door.</p>
-      <div class="photo-grid" style="max-width:480px; margin:1.6rem auto 0;">
-        <div class="photo-slot" style="border:none; padding:0;"><img src="images/transfer-van.png" alt="Private Mercedes transfer van, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="photo-slot" style="border:none; padding:0;"><img src="images/transfer-driver.png" alt="Private driver at the transfer vehicle, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="media-slider" style="max-width:480px; aspect-ratio:4/3; border-radius:4px; margin:1.6rem auto 0;">
+        <div class="slider-track">
+          <div class="photo-slot video-slot" style="border:none; padding:0;"><video src="videos/transfer-vclass-loop.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></video></div>
+          <div class="photo-slot" style="border:none; padding:0;"><img src="images/transfer-sprinter-exterior.jpg" alt="Private Mercedes Sprinter transfer vehicle, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="photo-slot" style="border:none; padding:0;"><img src="images/transfer-sprinter-interior-1.jpg" alt="Interior of the private transfer vehicle, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
+        </div>
+        <div class="slider-dots"></div>
+        <button class="slider-arrow prev" aria-label="Previous">‹</button>
+        <button class="slider-arrow next" aria-label="Next">›</button>
       </div>
     </div>
 
@@ -589,6 +608,8 @@
       <div class="stop-marker"></div>
       <div class="media-slider">
         <div class="slider-track">
+          <div class="photo-slot video-slot" style="border:none; padding:0;"><video src="videos/armenistis-loop.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></video></div>
+          <div class="photo-slot" style="border:none; padding:0;"><img src="images/armenistis-lighthouse-dusk.jpg" alt="Armenistis Lighthouse at dusk, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="photo-slot" style="border:none; padding:0;"><img src="images/armenistis-lighthouse-close.jpg" alt="Armenistis Lighthouse up close, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
           <div class="photo-slot" style="border:none; padding:0;"><img src="images/armenistis-cliff-view.jpg" alt="Sea view from the cliffs at Armenistis, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
         </div>
@@ -605,11 +626,18 @@
 
     <div class="stop">
       <div class="stop-marker"></div>
-      <div class="photo-grid">
-        <div class="photo-slot" style="border:none; padding:0;"><img src="images/ano-mera-village-1.webp" alt="Ano Mera village, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="photo-slot" style="border:none; padding:0;"><img src="images/ano-mera-village-2.jpg" alt="Aerial view of Ano Mera village and Panagia Tourliani, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="photo-slot" style="border:none; padding:0;"><img src="images/tourliani-courtyard.webp" alt="Panagia Tourliani monastery courtyard, Ano Mera, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
-        <div class="photo-slot" style="border:none; padding:0;"><img src="images/tourliani-facade.jpg" alt="Panagia Tourliani monastery facade, Ano Mera, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
+      <div class="media-slider">
+        <div class="slider-track">
+          <div class="photo-slot video-slot" style="border:none; padding:0;"><video src="videos/tourliani-loop.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></video></div>
+          <div class="photo-slot video-slot" style="border:none; padding:0;"><video src="videos/ano-mera-loop.mp4" autoplay muted loop playsinline style="width:100%;height:100%;object-fit:cover;"></video></div>
+          <div class="photo-slot" style="border:none; padding:0;"><img src="images/ano-mera-village-1.webp" alt="Ano Mera village, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="photo-slot" style="border:none; padding:0;"><img src="images/ano-mera-village-2.jpg" alt="Aerial view of Ano Mera village and Panagia Tourliani, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="photo-slot" style="border:none; padding:0;"><img src="images/tourliani-courtyard.webp" alt="Panagia Tourliani monastery courtyard, Ano Mera, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
+          <div class="photo-slot" style="border:none; padding:0;"><img src="images/tourliani-facade.jpg" alt="Panagia Tourliani monastery facade, Ano Mera, Mykonos" style="width:100%;height:100%;object-fit:cover;"></div>
+        </div>
+        <div class="slider-dots"></div>
+        <button class="slider-arrow prev" aria-label="Previous">‹</button>
+        <button class="slider-arrow next" aria-label="Next">›</button>
       </div>
       <div class="stop-text">
         <span class="stop-time">Stop 11</span>
@@ -631,6 +659,17 @@
         <h4>Kalafatis &amp; Elia</h4>
         <p>Leave your shoes at the edge and feel the sand shift warm beneath your feet before the cool water surprises you. Somewhere behind you, two soft hills rise from the coastline, the kind of quiet geometry that calms you before you understand why. What does it feel like to leave behind every title, every schedule, and become, just for an afternoon, one with the summer?</p>
       </div>
+    </div>
+  </section>
+
+  <!-- Guest video reviews -->
+  <section class="reviews-frame">
+    <span class="eyebrow" style="color:rgba(255,255,255,0.75);">In their own words</span>
+    <h3 style="color:var(--white-pure); font-size:1.4rem; margin-bottom:1.6rem;">What guests say</h3>
+    <div class="reviews-grid">
+      <div class="photo-slot video-slot" style="border:none; padding:0;"><video src="videos/review-1.mp4" controls playsinline style="width:100%;height:100%;object-fit:cover;"></video></div>
+      <div class="photo-slot video-slot" style="border:none; padding:0;"><video src="videos/review-2.mp4" controls playsinline style="width:100%;height:100%;object-fit:cover;"></video></div>
+      <div class="photo-slot video-slot" style="border:none; padding:0;"></div>
     </div>
   </section>
 
